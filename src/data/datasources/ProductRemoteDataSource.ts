@@ -1,7 +1,7 @@
-import axios from 'axios';
 import {Product} from '../../domain/entities/Product';
 import {ProductAdapter} from '../../domain/adapters/ProductAdapter';
 import {ProductFront} from '../../domain/entities/ProductFront';
+import api from '../../infraestructure/network/apis';
 
 export class ProductRemoteDataSource {
   private productAdapter: ProductAdapter;
@@ -11,9 +11,7 @@ export class ProductRemoteDataSource {
   }
 
   async fetchProducts(): Promise<ProductFront[]> {
-    const response = await axios.get<Product[]>(
-      'https://fakestoreapi.com/products',
-    );
+    const response = await api.get('/products');
     return response.data.map((product: Product) =>
       this.productAdapter.adapt(product),
     );
