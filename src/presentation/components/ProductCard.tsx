@@ -1,16 +1,16 @@
 import React from 'react';
-import { Product } from '../../domain/entities/Product';
 import { Image, Text, View } from 'react-native';
+import { ProductFront } from '../../domain/entities/ProductFront';
 
 interface IProps {
-  product: Product;
+  product: ProductFront;
 }
 
 export const ProductCard = ({ product }: IProps) => {
   return (
     <View style={styles.card}>
       <Image style={styles.image} source={{ uri: product.image }} />
-      <Text>{product.title}</Text>
+      <Text>{product.name}</Text>
     </View>
   );
 };

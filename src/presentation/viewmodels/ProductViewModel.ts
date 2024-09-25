@@ -1,9 +1,9 @@
 import {useEffect, useState} from 'react';
 import {GetProductUseCase} from '../../domain/usecases/GetProductUseCase';
-import {Product} from '../../domain/entities/Product';
+import {ProductFront} from '../../domain/entities/ProductFront';
 
 export const useProductViewModel = (getProductUseCase: GetProductUseCase) => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<ProductFront[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
