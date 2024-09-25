@@ -2,7 +2,7 @@ import axios from 'axios';
 import {Alert} from 'react-native';
 
 const api = axios.create({
-  baseURL: 'https://fakeasdasdasdstoreapi.com',
+  baseURL: 'https://fakestoreapi.com',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
