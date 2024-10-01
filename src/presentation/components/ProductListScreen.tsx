@@ -16,7 +16,7 @@ const ProductListScreen = () => {
   const { products, loading } = useProductViewModel(useCaseGetProduct);
 
   if (loading) {
-    return <Text>Cargando...</Text>;
+    return <Text>Cargando</Text>;
   }
 
   return (

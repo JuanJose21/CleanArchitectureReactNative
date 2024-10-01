@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Unit Testing example "App" Renderizar el componente App 1`] = `
+<RCTSafeAreaView>
+  <Text>
+    Cargando
+  </Text>
+</RCTSafeAreaView>
+`;
